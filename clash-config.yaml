@@ -31,7 +31,7 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws
+      path: /ws/proxyip=proxyip.tp1.090227.xyz:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443,proxyip.fxxk.dedyn.io:443,proxyip.hw.090227.xyz:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-B"
@@ -47,7 +47,7 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws
+      path: /ws/proxyip=proxyip.tp1.090227.xyz:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443,proxyip.fxxk.dedyn.io:443,proxyip.hw.090227.xyz:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-C"
@@ -63,7 +63,7 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws
+      path: /ws/proxyip=proxyip.tp1.090227.xyz:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443,proxyip.fxxk.dedyn.io:443,proxyip.hw.090227.xyz:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-D"
@@ -79,7 +79,7 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws
+      path: /ws/proxyip=proxyip.tp1.090227.xyz:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443,proxyip.fxxk.dedyn.io:443,proxyip.hw.090227.xyz:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-E"
@@ -95,7 +95,7 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws
+      path: /ws/proxyip=proxyip.tp1.090227.xyz:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443,proxyip.fxxk.dedyn.io:443,proxyip.hw.090227.xyz:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-F"
@@ -111,7 +111,7 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws
+      path: /ws/proxyip=proxyip.tp1.090227.xyz:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443,proxyip.fxxk.dedyn.io:443,proxyip.hw.090227.xyz:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-G"
@@ -127,7 +127,7 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws
+      path: /ws/proxyip=proxyip.tp1.090227.xyz:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443,proxyip.fxxk.dedyn.io:443,proxyip.hw.090227.xyz:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-H"
@@ -143,7 +143,7 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws
+      path: /ws/proxyip=proxyip.tp1.090227.xyz:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443,proxyip.fxxk.dedyn.io:443,proxyip.hw.090227.xyz:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
 
@@ -179,6 +179,10 @@ proxy-groups:
       - "EDT-Pages-H"
 
 rules:
+  # QUIC/HTTP3 (UDP 443) is filtered here and the WS transport only carries TCP
+  # + DNS UDP anyway. Rejecting it makes browsers fall back to HTTP/1.1 fast
+  # instead of stalling on a protocol that can never complete.
+  - AND,((NETWORK,UDP),(DSTPORT,443)),REJECT
   - GEOIP,LAN,DIRECT,no-resolve
   - GEOIP,CN,DIRECT
   - MATCH,PROXY
