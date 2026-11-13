@@ -25,7 +25,23 @@ dns:
 proxies:
   - name: "EDT-Pages-A"
     type: vless
-    server: 103.21.244.138
+    server: 103.21.244.69
+    port: 2053
+    uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
+    network: ws
+    tls: true
+    udp: true
+    servername: EDGETUNNEL-PAGES-DI9.PAGES.DEV
+    client-fingerprint: chrome
+    skip-cert-verify: false
+    alpn: [http/1.1]
+    ws-opts:
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.de.cmliussss.net:443,proxyip.cmliussss.net:443
+      headers:
+        Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
+  - name: "EDT-Pages-B"
+    type: vless
+    server: 188.114.97.192
     port: 2087
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
@@ -36,29 +52,13 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.jp.cmliussss.net:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443
-      headers:
-        Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
-  - name: "EDT-Pages-B"
-    type: vless
-    server: 188.114.99.44
-    port: 8443
-    uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
-    network: ws
-    tls: true
-    udp: true
-    servername: EDGETUNNEL-PAGES-DI9.PAGES.DEV
-    client-fingerprint: chrome
-    skip-cert-verify: false
-    alpn: [http/1.1]
-    ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.jp.cmliussss.net:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.de.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-C"
     type: vless
-    server: 188.114.96.167
-    port: 2083
+    server: 103.21.244.248
+    port: 2087
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
     tls: true
@@ -68,28 +68,12 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.jp.cmliussss.net:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.de.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-D"
     type: vless
-    server: 104.19.46.30
-    port: 2083
-    uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
-    network: ws
-    tls: true
-    udp: true
-    servername: EDGETUNNEL-PAGES-DI9.PAGES.DEV
-    client-fingerprint: chrome
-    skip-cert-verify: false
-    alpn: [http/1.1]
-    ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.jp.cmliussss.net:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443
-      headers:
-        Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
-  - name: "EDT-Pages-E"
-    type: vless
-    server: 188.114.97.76
+    server: 188.114.96.153
     port: 2096
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
@@ -100,13 +84,29 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.jp.cmliussss.net:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.de.cmliussss.net:443,proxyip.cmliussss.net:443
+      headers:
+        Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
+  - name: "EDT-Pages-E"
+    type: vless
+    server: 188.114.96.44
+    port: 2053
+    uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
+    network: ws
+    tls: true
+    udp: true
+    servername: EDGETUNNEL-PAGES-DI9.PAGES.DEV
+    client-fingerprint: chrome
+    skip-cert-verify: false
+    alpn: [http/1.1]
+    ws-opts:
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.de.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-F"
     type: vless
-    server: 188.114.97.127
-    port: 2083
+    server: 188.114.99.97
+    port: 8443
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
     tls: true
@@ -116,13 +116,13 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.jp.cmliussss.net:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.de.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-G"
     type: vless
-    server: 188.114.98.157
-    port: 2087
+    server: 104.26.7.96
+    port: 8443
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
     tls: true
@@ -132,13 +132,29 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.jp.cmliussss.net:443,proxyip.cmliussss.net:443,proxyip.us.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.de.cmliussss.net:443,proxyip.cmliussss.net:443
+      headers:
+        Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
+  - name: "EDT-Pages-H"
+    type: vless
+    server: 188.114.97.144
+    port: 2053
+    uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
+    network: ws
+    tls: true
+    udp: true
+    servername: EDGETUNNEL-PAGES-DI9.PAGES.DEV
+    client-fingerprint: chrome
+    skip-cert-verify: false
+    alpn: [http/1.1]
+    ws-opts:
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.nl.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.de.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-CF-Pinned-A"
     type: vless
-    server: 103.21.244.138
-    port: 2087
+    server: 103.21.244.69
+    port: 2053
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
     tls: true
@@ -153,8 +169,8 @@ proxies:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-CF-Pinned-B"
     type: vless
-    server: 188.114.99.44
-    port: 8443
+    server: 188.114.97.192
+    port: 2087
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
     tls: true
@@ -183,6 +199,7 @@ proxy-groups:
       - "EDT-Pages-E"
       - "EDT-Pages-F"
       - "EDT-Pages-G"
+      - "EDT-Pages-H"
   - name: "PROXY"
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -196,6 +213,7 @@ proxy-groups:
       - "EDT-Pages-E"
       - "EDT-Pages-F"
       - "EDT-Pages-G"
+      - "EDT-Pages-H"
   - name: "CF-CHALLENGE"
     type: fallback
     url: https://www.gstatic.com/generate_204
