@@ -25,7 +25,7 @@ dns:
 proxies:
   - name: "EDT-Pages-A"
     type: vless
-    server: 188.114.97.206
+    server: 103.21.244.197
     port: 8443
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
@@ -36,13 +36,13 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.hw.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-B"
     type: vless
-    server: 188.114.96.170
-    port: 2087
+    server: 188.114.97.28
+    port: 2053
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
     tls: true
@@ -52,26 +52,10 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.hw.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-Pages-C"
-    type: vless
-    server: 188.114.98.185
-    port: 2083
-    uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
-    network: ws
-    tls: true
-    udp: true
-    servername: EDGETUNNEL-PAGES-DI9.PAGES.DEV
-    client-fingerprint: chrome
-    skip-cert-verify: false
-    alpn: [http/1.1]
-    ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
-      headers:
-        Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
-  - name: "EDT-Pages-D"
     type: vless
     server: 104.26.7.96
     port: 8443
@@ -84,13 +68,13 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.hw.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
-  - name: "EDT-Pages-E"
+  - name: "EDT-Pages-D"
     type: vless
-    server: 188.114.99.32
-    port: 2087
+    server: 188.114.96.18
+    port: 443
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
     tls: true
@@ -100,12 +84,28 @@ proxies:
     skip-cert-verify: false
     alpn: [http/1.1]
     ws-opts:
-      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.tp1.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.hw.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
+      headers:
+        Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
+  - name: "EDT-Pages-E"
+    type: vless
+    server: 172.67.163.0
+    port: 2053
+    uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
+    network: ws
+    tls: true
+    udp: true
+    servername: EDGETUNNEL-PAGES-DI9.PAGES.DEV
+    client-fingerprint: chrome
+    skip-cert-verify: false
+    alpn: [http/1.1]
+    ws-opts:
+      path: /ws/proxyip=proxyip.fr.cmliussss.net:443,proxyip.jp.cmliussss.net:443,proxyip.hw.090227.xyz:443,proxyip.nl.cmliussss.net:443,proxyip.cmliussss.net:443
       headers:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-CF-Pinned-A"
     type: vless
-    server: 188.114.97.206
+    server: 103.21.244.197
     port: 8443
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
@@ -121,8 +121,8 @@ proxies:
         Host: EDGETUNNEL-PAGES-DI9.PAGES.DEV
   - name: "EDT-CF-Pinned-B"
     type: vless
-    server: 188.114.96.170
-    port: 2087
+    server: 188.114.97.28
+    port: 2053
     uuid: d8a2ffbb-1c44-4e83-8a62-5e5fe79cc42a
     network: ws
     tls: true
